@@ -1,0 +1,55 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Task {
+  id: Int!
+  title: String!
+  description: String!
+  status: String!
+  userId: Int!
+}
+
+type User {
+  id: Int!
+  email: String!
+  username: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  findAllTasks: [Task!]!
+  findByUserId(userId: Float!): [Task!]!
+}
+
+type Mutation {
+  register(data: CreateUserArgs!): User!
+  login(data: LoginUserArgs!): User!
+  remove(id: Float!): Task!
+  update(attrs: UpdateTaskArgs!, taskId: Float!): Task!
+  create(attrs: UpdateTaskArgs!): Task!
+}
+
+input CreateUserArgs {
+  email: String!
+  username: String!
+  password: String!
+}
+
+input LoginUserArgs {
+  email: String!
+  password: String!
+}
+
+input UpdateTaskArgs {
+  title: String!
+  description: String
+  status: String
+  userId: Int
+}

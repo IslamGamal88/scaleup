@@ -1,0 +1,22 @@
+{
+  "name": "scaleup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "docker-compose up -d",
+    "server:dev": "yarn workspace server start:dev",
+    "dev": "concurrently --kill-others-on-fail \"yarn client\" \"yarn start:dev\"",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}

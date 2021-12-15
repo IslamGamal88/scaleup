@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/islamgamal/.nvm/versions/node/v16.3.0/bin/node /Users/islamgamal/.nvm/versions/node/v16.3.0/bin/yarn create react-app client --template typescript
+
+PATH: 
+  /Users/islamgamal/.deno/bin:/opt/homebrew/bin:/Users/islamgamal/.nvm/versions/node/v16.3.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.3.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/islamgamal/Islam/personal/scaleup/package.json: Unexpected token } in JSON at position 250
+      at JSON.parse (<anonymous>)
+      at /Users/islamgamal/.nvm/versions/node/v16.3.0/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/islamgamal/.nvm/versions/node/v16.3.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/islamgamal/.nvm/versions/node/v16.3.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "scaleup",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "workspaces": {
+      "packages": [
+        "packages/*"
+      ]
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
